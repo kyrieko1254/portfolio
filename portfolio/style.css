@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #f7f7f9;
+  color: #222;
+  line-height: 1.6;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.logo {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #3a86ff;
+}
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: #3a86ff;
+}
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: none;
+}
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1600&q=80') center center/cover no-repeat;
+  z-index: 1;
+  filter: brightness(0.6) blur(0.5px);
+}
+.hero-text {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: 0 2rem;
+  color: #fff;
+  text-align: center;
+}
+.hero-text h1 {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.25);
+}
+.hero-text p {
+  font-size: 1.3rem;
+  color: #e0e7ff;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.18);
+}
+.projects {
+  padding: 4rem 2rem 2rem 2rem;
+  background: #fff;
+}
+.projects h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #3a86ff;
+}
+.project-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  background: #f7f7f9;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 16px rgba(58,134,255,0.07);
+  padding: 1.5rem;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(58,134,255,0.15);
+}
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+}
+.card h3 {
+  margin: 0.5rem 0 0.3rem 0;
+  color: #222;
+}
+.card p {
+  color: #555;
+  font-size: 1rem;
+}
+.contact {
+  padding: 4rem 2rem 2rem 2rem;
+  background: #e0e7ff;
+}
+.contact h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #3a86ff;
+}
+#contactForm {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#contactForm input,
+#contactForm textarea {
+  padding: 0.9rem 1rem;
+  border: none;
+  border-radius: 0.7rem;
+  font-size: 1rem;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  resize: none;
+}
+#contactForm button {
+  background: #3a86ff;
+  color: #fff;
+  border: none;
+  border-radius: 0.7rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#contactForm button:hover {
+  background: #265dbe;
+}
+#formMessage {
+  text-align: center;
+  margin-top: 1rem;
+  color: #3a86ff;
+  font-weight: 500;
+}
+footer {
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+  color: #888;
+  font-size: 1rem;
+  background: #fff;
+  margin-top: 2rem;
+}
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    min-height: 50vh;
+  }
+  .hero img {
+    width: 250px;
+    height: 250px;
+  }
+  .project-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .logo {
+    font-size: 1.2rem;
+  }
+  nav ul {
+    gap: 1rem;
+  }
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+  .projects, .contact {
+    padding: 2rem 0.5rem;
+  }
+  .card {
+    width: 95vw;
+    min-width: 0;
+  }
+  #contactForm {
+    max-width: 95vw;
+  }
+} 
